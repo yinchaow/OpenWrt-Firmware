@@ -17,8 +17,8 @@ env:
 
 on:
   workflow_dispatch:
-#  schedule:
-#    - cron: 0 */18 * * *
+  schedule:
+    - cron: 0 */18 * * *
 
 jobs:
   check:
@@ -56,3 +56,11 @@ jobs:
       with:
         retain_days: 1
         keep_minimum_runs: 1
+
+    - name: Notify telegram
+      uses: yanzay/notify-telegram@v0.1.0
+      if: always()
+      with:
+        chat: 1095730383
+        token: 5637339918:AAFXqNZbV28ftgUIWwKH4rqYBqmpM_Zc9tM
+        status: ${{ job.status }}
