@@ -37,3 +37,7 @@ sed -i '$ised -i '"'"'s/start/ignore/g'"'"' /etc/config/dhcp' package/lean/defau
 sed -i '$ised -i '"'"'s/100/1/g'"'"' /etc/config/dhcp' package/lean/default-settings/files/zzz-default-settings
 sed -i '$ised -i \x27\/limit\/d\x27\ /etc/config/dhcp' package/lean/default-settings/files/zzz-default-settings
 sed -i '$ised -i \x27\/leasetime\/d\x27\ /etc/config/dhcp' package/lean/default-settings/files/zzz-default-settings
+
+# Change default theme
+sed -i 's/Bootstrap/Argonne/g' package/lede/feeds/luci/collections/luci/Makefile
+sed -i 's/bootstrap/argonne/g' package/lede/feeds/luci/collections/luci/Makefile
