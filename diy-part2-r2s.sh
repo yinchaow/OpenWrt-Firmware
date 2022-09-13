@@ -33,3 +33,9 @@ sed -i '$ised -i \x27\/leasetime\/d\x27\ /etc/config/dhcp' package/lean/default-
 # Change default theme
 sed -i 's/Bootstrap/Argonne/g' feeds/luci/collections/luci/Makefile
 sed -i 's/bootstrap/argonne/g' feeds/luci/collections/luci/Makefile
+
+# Change config of theme Argonne
+sed -i '$ised -i '"'"'s/normal/dark/g'"'"' /etc/config/argonne' package/lean/default-settings/files/zzz-default-settings
+sed -i '$ised -i '"'"'s/483d8b/1e1e1e/g'"'"' /etc/config/argonne' package/lean/default-settings/files/zzz-default-settings
+sed -i '$ised -i \x27\/bing_background\/d\x27\ /etc/config/argonne' package/lean/default-settings/files/zzz-default-settings
+sed -i '$ised -i \x27$i\\ \\ \\ \\ \\ \\ \\ \\ option bing_background '"'"'"'"'1'"'"'"'"'\x27 /etc/config/argonne' package/lean/default-settings/files/zzz-default-settings
