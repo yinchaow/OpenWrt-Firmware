@@ -49,4 +49,4 @@ sed -i '$ised -i \x27\/bing_background\/d\x27\ /etc/config/argonne' package/lean
 sed -i '$ised -i \x27$i\\ \\ \\ \\ \\ \\ \\ \\ option bing_background '"'"'"'"'1'"'"'"'"'\x27 /etc/config/argonne' package/lean/default-settings/files/zzz-default-settings
 
 # Change dependency of luci-app-bypass
-sed -i 's/luci-lib-ipkg//g' package/feeds/kenzo/luci-app-bypass/Makefile
+#sed -i 's/luci-lib-ipkg//g' package/feeds/kenzo/luci-app-bypass/Makefile
