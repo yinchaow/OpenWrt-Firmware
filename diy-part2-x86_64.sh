@@ -30,6 +30,9 @@ sed -i '$ised -i \x27$i\\ \\ \\ \\ \\ \\ \\ \\ option gateway '"'"'"'"'192.168.7
 sed -i '$ised -i \x27$i\\ \\ \\ \\ \\ \\ \\ \\ option broadcast '"'"'"'"'192.168.7.255'"'"'"'"'\x27 /etc/config/network' package/lean/default-settings/files/zzz-default-settings
 sed -i '$ised -i \x27$i\\ \\ \\ \\ \\ \\ \\ \\ option dns '"'"'"'"'223.6.6.6\\ 223.5.5.5\\ 119.29.29.29\\ 114.114.114.114'"'"'"'"'\x27 /etc/config/network' package/lean/default-settings/files/zzz-default-settings
 
+# Disable internal IPv6 management
+sed -i '$ised -i \x27$i\\ \\ \\ \\ \\ \\ \\ \\ option delegate '"'"'"'"'0'"'"'"'"'\x27 /etc/config/network' package/lean/default-settings/files/zzz-default-settings
+
 # Disable dhcp
 #sed -i '$ised -i \x27s\/start\ '"'"'"'"'100'"'"'"'"'\/ignore\ '"'"'"'"'1'"'"'"'"'\/g\x27\ /etc/config/dhcp' package/lean/default-settings/files/zzz-default-settings
 #sed -i '$ised\ -i\ \x27s\/start\\ '"'"'"'"'100'"'"'"'"'\/ignore\\ '"'"'"'"'1'"'"'"'"'\/g\x27\ \/etc\/config\/dhcp' package/lean/default-settings/files/zzz-default-settings
